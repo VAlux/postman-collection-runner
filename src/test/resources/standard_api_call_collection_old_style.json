@@ -1,0 +1,62 @@
+{
+  "info": {
+    "name": "MOSI smoke tests",
+    "_postman_id": "1fbcd187-5715-44c6-36f9-3190e6b5dec1",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "StandardAPICall",
+      "event": [
+        {
+          "listen": "test",
+          "errorReason": "Server responded with code, which is not equal to 200",
+          "errorResult": "User may experience point-forecast service outage",
+          "script": {
+            "id": "fbbf1b75-9bd6-452c-9880-e52c838b8561",
+            "type": "text/javascript",
+            "exec": [
+              "tests[\"Status code is 200\"] = responseCode.code === 200;"
+            ]
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {},
+        "url": {
+          "raw": "http://example.com",
+          "protocol": "http",
+          "host": [
+            "point-forecast",
+            "weather",
+            "mg"
+          ],
+          "path": [
+            "search"
+          ],
+          "query": [
+            {
+              "key": "locatedAt",
+              "value": "13,53",
+              "equals": true
+            },
+            {
+              "key": "validPeriod",
+              "value": "PT0S",
+              "equals": true
+            },
+            {
+              "key": "fields",
+              "value": "condensationIndicator",
+              "equals": true
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
