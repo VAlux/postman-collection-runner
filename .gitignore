@@ -1,5 +1,73 @@
 .gradle/
-.idea/
 build/
 gradle/
 out/
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+**/target/**
+**/test-output/**
+.serverless/
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Eclipse files #
+.settings
+.project
+.classpath
+.metadata
+.recommenders
+
+.idea/
+*.iml
+node_modules
+.tmp
+.sass-cache
+bower_components
+.sonar
+
+#Checkstyle
+.checkstyle
+
+# EIS generated files
+EISDynamoDBSearchEndpoint.json
+EISDynamoDBExtremeEndpoint.json
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
